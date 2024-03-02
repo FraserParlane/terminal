@@ -1,1 +1,1 @@
-alias test="echo $0"
+alias test="echo 'hey'"
