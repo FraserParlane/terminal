@@ -2,58 +2,62 @@
     "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
     "final_space": true,
     "version": 2,
+    "palette": {
+        "system": "blue",
+        "git": "green",
+        "minor": "#303030"
+    },
     "blocks": [
         {
             "type": "prompt",
             "alignment": "left",
+            "overflow": "hide",
             "segments": [
                 {
-                    "type": "session",
                     "style": "diamond",
+                    "type": "session",
                     "foreground": "black",
-                    "background": "blue",
+                    "background": "p:system",
                     "template": " {{ .HostName }} "
-                },
-                {
-                    "type": "text",
-                    "style": "powerline",
-                    "foreground": "blue",
-                    "template": "\u0020\u0020"
                 },
                 {
                     "type": "git",
                     "style": "diamond",
                     "trailing_diamond": "\ue0b8",
                     "foreground": "black",
-                    "background": "green",
+                    "background": "p:git",
                     "template": "{{ if .IsWorkTree  }} {{ else }} {{ .RepoName }} {{ .HEAD }} {{  end  }}"
 
                 },
                 {
                     "type": "path",
-                    "style": "powerline",
+                    "style": "diamond",
                     "foreground": "white",
-                    "trailing_diamond": "a",
-                    "template": " {{ .Location }}"
+                    "background": "p:minor",
+                    "trailing_diamond": "\ue0b8",
+                    "template": " {{ .Location }} "
+
                 }
             ]
         },
         {
             "type": "prompt",
             "alignment": "right",
+            "overflow": "hide",
             "segments": [
                 {
                     "type": "time",
                     "style": "diamond",
                     "leading_diamond": "\uE0BA",
-                    "foreground": "black",
-                    "background": "blue"
+                    "foreground": "white",
+                    "background": "p:minor"
                 }
             ]
         },
         {
             "type": "prompt",
             "alignment": "left",
+            "overflow": "hide",
             "segments": [
                 {
                     "type": "text",
