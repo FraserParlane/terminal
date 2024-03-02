@@ -8,31 +8,38 @@
             "alignment": "left",
             "segments": [
                 {
-                    "type": "path",
+                    "type": "session",
+                    "style": "powerline",
                     "foreground": "#000000",
-                    "background": "#59C2FF",
-                    "properties": {
-                        "style": "folder"
-                    }
+                    "background": "blue",
+                    "template": " {{ .HostName }} "
+                },
+                {
+                    "type": "git",
+                    "style": "powerline",
+                    "foreground": "#000000",
+                    "background": "green"
                 }
             ]
         },
         {
             "type": "prompt",
+            "style": "powerline",
             "alignment": "left",
             "segments": [
                 {
                     "type": "path",
                     "style": "powerline",
-                    // "leading_diamond": "",
-                    // "trailing_diamond": "",
-                    "foreground": "#111111",
-                    "background": "#AAD94C",
-                    "properties": {
-                        "style": "folder"
-                    }
+                    "foreground": "yellow",
+                    "trailing_diamond": "a",
+                    "template": " {{ .Location }}"
                 }
             ]
         }
-    ]
+    ],
+    "transient_prompt": {
+        "background": "transparent",
+        "foreground": "red",
+        "template": "❯ "
+    }
 }
