@@ -9,37 +9,64 @@
             "segments": [
                 {
                     "type": "session",
-                    "style": "powerline",
-                    "foreground": "#000000",
+                    "style": "diamond",
+                    "foreground": "black",
                     "background": "blue",
                     "template": " {{ .HostName }} "
                 },
                 {
-                    "type": "git",
+                    "type": "text",
                     "style": "powerline",
-                    "foreground": "#000000",
-                    "background": "green"
+                    "foreground": "blue",
+                    "template": "\u0020\u0020"
+                },
+                {
+                    "type": "git",
+                    "style": "diamond",
+                    "trailing_diamond": "\ue0b8",
+                    "foreground": "black",
+                    "background": "green",
+                    "template": "{{ if .IsWorkTree  }} {{ else }} {{ .RepoName }} {{ .HEAD }} {{  end  }}"
+
+                },
+                {
+                    "type": "path",
+                    "style": "powerline",
+                    "foreground": "white",
+                    "trailing_diamond": "a",
+                    "template": " {{ .Location }}"
                 }
             ]
         },
         {
             "type": "prompt",
-            "style": "powerline",
+            "alignment": "right",
+            "segments": [
+                {
+                    "type": "time",
+                    "style": "diamond",
+                    "leading_diamond": "\uE0BA",
+                    "foreground": "black",
+                    "background": "blue"
+                }
+            ]
+        },
+        {
+            "type": "prompt",
             "alignment": "left",
             "segments": [
                 {
-                    "type": "path",
+                    "type": "text",
                     "style": "powerline",
-                    "foreground": "yellow",
-                    "trailing_diamond": "a",
-                    "template": " {{ .Location }}"
-                }
+                    "foreground": "blue",
+                    "template": "->>"
+                }   
             ]
         }
     ],
     "transient_prompt": {
         "background": "transparent",
-        "foreground": "red",
-        "template": "❯ "
+        "foreground": "blue",
+        "template": "->> "
     }
 }
