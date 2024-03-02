@@ -68,10 +68,5 @@
                 }   
             ]
         }
-    ],
-    "transient_prompt": {
-        "background": "transparent",
-        "foreground": "blue",
-        "template": "->> "
-    }
+    ]
 }
