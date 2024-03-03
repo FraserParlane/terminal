@@ -20,6 +20,7 @@
                 {
                     "type": "shell",
                     "style": "diamond",
+                    "leading_diamond": "\ue0b6",
                     "trailing_diamond": "\ue0b8",
                     "foreground": "p:purpletext",
                     "background": "p:purple"
@@ -61,6 +62,7 @@
                     "type": "time",
                     "style": "diamond",
                     "leading_diamond": "\uE0BA",
+                    "trailing_diamond": "\ue0b4",
                     "foreground": "white",
                     "background": "p:minor"
                 }
