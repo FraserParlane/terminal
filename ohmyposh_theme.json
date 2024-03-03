@@ -5,7 +5,11 @@
     "palette": {
         "system": "blue",
         "git": "green",
-        "minor": "#303030"
+        "minor": "#303030",
+        "greentext": "#2e3312",
+        "bluetext": "#173140",
+        "purple": "#c387ff",
+        "purpletext": "#312240"
     },
     "blocks": [
         {
@@ -14,18 +18,25 @@
             "overflow": "hide",
             "segments": [
                 {
+                    "type": "shell",
                     "style": "diamond",
-                    "type": "session",
                     "trailing_diamond": "\ue0b8",
-                    "foreground": "black",
-                    "background": "p:system",
+                    "foreground": "p:purpletext",
+                    "background": "p:purple"
+                },
+                {
+                    "type": "session",
+                    "style": "diamond",
+                    "trailing_diamond": "\ue0b8",
+                    "foreground": "p:bluetext",
+                    "background": "blue",
                     "template": " {{ .HostName }} "
                 },
                 {
                     "type": "git",
                     "style": "diamond",
                     "trailing_diamond": "\ue0b8",
-                    "foreground": "black",
+                    "foreground": "p:greentext",
                     "background": "p:git",
                     "template": "{{ if .IsWorkTree  }} {{ else }} {{ .RepoName }} {{ .HEAD }} {{  end  }}"
 
