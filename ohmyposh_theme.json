@@ -16,6 +16,7 @@
                 {
                     "style": "diamond",
                     "type": "session",
+                    "trailing_diamond": "\ue0b8",
                     "foreground": "black",
                     "background": "p:system",
                     "template": " {{ .HostName }} "
