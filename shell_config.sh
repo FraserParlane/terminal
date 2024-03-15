@@ -9,3 +9,7 @@ export PYTHONPATH="${PYTHONPATH}:${SCRIPT_DIR}"
 function zlib_decompress() {
     python3 -c 'from term_tools import zlib_decompress; zlib_decompress()' $1
 }
+
+function zlib_compress() {
+    python3 -c 'from term_tools import zlib_compress; zlib_compress()' $1
+}
