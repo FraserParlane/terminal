@@ -5,4 +5,6 @@ set tabstop=4
 set hlsearch
 set expandtab
 set autoindent
+set termguicolors
 syntax on
+colorscheme ayu
