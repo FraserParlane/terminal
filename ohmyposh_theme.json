@@ -18,7 +18,8 @@
             "overflow": "hide",
             "segments": [
                 {
-                    "type": "shell",
+                    "template": "{{.Icon}} ",
+                    "type": "os",
                     "style": "diamond",
                     "leading_diamond": "\ue0b6",
                     "trailing_diamond": "\ue0b8",
