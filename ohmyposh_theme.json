@@ -18,10 +18,16 @@
             "overflow": "hide",
             "segments": [
                 {
-                    "template": "{{.Icon}} ",
+                    "template": "{{.Icon}}",
                     "type": "os",
                     "style": "diamond",
                     "leading_diamond": "\ue0b6",
+                    "foreground": "p:purpletext",
+                    "background": "p:purple"
+                },
+                {
+                    "type": "time",
+                    "style": "diamond",
                     "trailing_diamond": "\ue0b8",
                     "foreground": "p:purpletext",
                     "background": "p:purple"
@@ -41,7 +47,6 @@
                     "foreground": "p:greentext",
                     "background": "p:git",
                     "template": "{{ if .IsWorkTree  }} {{ else }} {{ .RepoName }} {{ .HEAD }} {{  end  }}"
-
                 },
                 {
                     "type": "path",
@@ -50,22 +55,6 @@
                     "background": "p:minor",
                     "trailing_diamond": "\ue0b8",
                     "template": " {{ .Location }} "
-
-                }
-            ]
-        },
-        {
-            "type": "prompt",
-            "alignment": "right",
-            "overflow": "hide",
-            "segments": [
-                {
-                    "type": "time",
-                    "style": "diamond",
-                    "leading_diamond": "\uE0BA",
-                    "trailing_diamond": "\ue0b4",
-                    "foreground": "white",
-                    "background": "p:minor"
                 }
             ]
         },
@@ -80,7 +69,7 @@
                     "style": "powerline",
                     "foreground": "blue",
                     "template": "->>"
-                }   
+                }
             ]
         }
     ]
