@@ -28,14 +28,14 @@
                 {
                     "type": "time",
                     "style": "diamond",
-                    "trailing_diamond": "\ue0b8",
+                    "trailing_diamond": "\ue0bc",
                     "foreground": "p:purpletext",
                     "background": "p:purple"
                 },
                 {
                     "type": "session",
                     "style": "diamond",
-                    "trailing_diamond": "\ue0b8",
+                    "trailing_diamond": "\ue0bc",
                     "foreground": "p:bluetext",
                     "background": "blue",
                     "template": " {{ .HostName }} "
@@ -43,7 +43,7 @@
                 {
                     "type": "git",
                     "style": "diamond",
-                    "trailing_diamond": "\ue0b8",
+                    "trailing_diamond": "\ue0bc",
                     "foreground": "p:greentext",
                     "background": "p:git",
                     "template": "{{ if .IsWorkTree  }} {{ else }} {{ .RepoName }} {{ .HEAD }} {{  end  }}"
@@ -53,7 +53,7 @@
                     "style": "diamond",
                     "foreground": "white",
                     "background": "p:minor",
-                    "trailing_diamond": "\ue0b8",
+                    "trailing_diamond": "\ue0bc",
                     "template": " {{ .Location }} "
                 }
             ]
